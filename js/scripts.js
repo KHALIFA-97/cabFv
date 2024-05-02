@@ -40,14 +40,14 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-    const whatsappButton = document.querySelector('.whatsapp-button');
+const whatsappButton = document.querySelector('.whatsapp-button');
 
+whatsappButton.addEventListener('click', () => {
+    const phoneNumber = '+33748364359'; // Your phone number
+    const url = `https://wa.me/${encodeURIComponent(phoneNumber)}`;
+    window.open(url, '_blank');
+});
 
-    whatsappButton.addEventListener('click', () => {
-        const phoneNumber = '+33748364359'; // Your phone number
-        const url = `https://web.whatsapp.com/send?phone=${encodeURIComponent(phoneNumber)}`;
-        window.open(url, '_blank');
-    });
     
     const navbartoggler = document.querySelector('.yellow-btn');
 
